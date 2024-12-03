@@ -1,0 +1,157 @@
+* {
+  outline: none;
+}
+
+body .btn {
+  padding: 10px 0;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  transition: 400ms;
+  cursor: pointer;
+  color: #0085FF;
+  background-color: #fff;
+  border: 1px solid #0085FF;
+  border-radius: 5px;
+}
+body .btn:hover {
+  color: #fff;
+  background-color: #0085FF;
+}
+body .btn.secondary {
+  padding: 10px 0;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  transition: 400ms;
+  cursor: pointer;
+  color: #FF3D00;
+  background-color: #fff;
+  border: 1px solid #FF3D00;
+  border-radius: 5px;
+}
+body .btn.secondary:hover {
+  color: #fff;
+  background-color: #FF3D00;
+}
+body .btn.reverse {
+  padding: 10px 0;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  transition: 400ms;
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+body .btn.reverse:hover {
+  color: transparent;
+  background-color: #fff;
+}
+body .btn.reverse:hover {
+  color: #0085FF;
+}
+body h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #202020;
+}
+body h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
+}
+body h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #202020;
+}
+body h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #202020;
+}
+body p, body a, body input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #202020;
+}
+body p.context, body a.context, body input.context {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #939393;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container.form {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e3e3e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 30%;
+}
+form input:not(.btn) {
+  padding: 10px 3%;
+  width: 94%;
+  border-radius: 8px;
+  border: 1px solid #e3e3e3;
+  outline: none;
+}
+form input:not(.btn):focus {
+  border: 1px solid #0085FF;
+  caret-color: #0085FF;
+}
+form input:not(.btn)::placeholder {
+  font-weight: 600;
+}
+form .links-menu a {
+  display: block;
+  text-align: center;
+  transition: 300ms;
+}
+form .links-menu a:hover {
+  color: #0085FF;
+}
+
+header {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .nav-links {
+  display: flex;
+  gap: 24px;
+}
+header h1 {
+  color: #EF5DA8;
+}
+header a.active svg path, header div.active svg path {
+  fill: #FF3D00;
+}
+
+/*# sourceMappingURL=style.css.map */

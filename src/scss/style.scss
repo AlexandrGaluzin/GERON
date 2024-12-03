@@ -1,0 +1,109 @@
+@use "colors" as *;
+@use 'mixin' as *;
+
+
+*{
+    outline: none;
+}
+
+body{
+    .btn{
+        @include button($main);
+        &.secondary{
+            @include button($second);
+        }
+        &.reverse{
+            @include button($light, transparent);
+            &:hover{
+                color: $main;
+            }
+        }
+    }
+    h1{
+        @include font-style(20px, 900);
+    }
+    h2{
+        @include font-style(16px, 900, $light);
+    }
+    h3{
+        @include font-style(14px, 700);
+    }
+    h4{
+        @include font-style(12px, 700);
+    }
+    p, a, input{
+        @include font-style(14px);
+        &.context{
+            @include font-style($color: $context)
+        }
+    }    
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    &.form{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+form{
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid $stroke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 30%;
+    input:not(.btn){
+        padding: 10px 3%;
+        width: 94%;
+        border-radius: 8px;
+        border: 1px solid $stroke;
+        outline: none;
+        &:focus{
+            border: 1px solid $main;
+            caret-color: $main;
+        }
+        &::placeholder{
+            font-weight: 600;
+        }
+    }
+    .links-menu{
+        a{
+            display: block;
+            text-align: center;
+            transition: 300ms;
+            &:hover{
+                color: $main;
+            }
+        }
+    }
+}
+
+header{
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav-links{
+        display: flex;
+        gap: 24px;
+    }
+    h1{
+        color: $active;
+    }
+    a.active, div.active{
+        svg{
+            path{
+                fill: $second;
+            }
+        }
+    }
+}
+
+
