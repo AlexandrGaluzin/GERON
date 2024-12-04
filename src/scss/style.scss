@@ -1,48 +1,66 @@
-@use "colors" as *;
+@use 'colors' as *;
 @use 'mixin' as *;
 
 
-*{
+* {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
     outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
 }
 
-body{
-    .btn{
+body {
+    .btn {
         @include button($main);
-        &.secondary{
+
+        &.secondary {
             @include button($second);
         }
-        &.reverse{
+
+        &.reverse {
             @include button($light, transparent);
-            &:hover{
+
+            &:hover {
                 color: $main;
             }
         }
     }
-    h1{
+
+    h1 {
         @include font-style(20px, 900);
     }
-    h2{
+
+    h2 {
         @include font-style(16px, 900, $light);
     }
-    h3{
+
+    h3 {
         @include font-style(14px, 700);
     }
-    h4{
+
+    h4 {
         @include font-style(12px, 700);
     }
-    p, a, input{
+
+    p,
+    a,
+    input {
         @include font-style(14px);
-        &.context{
+
+        &.context {
             @include font-style($color: $context)
         }
-    }    
+    }
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
-    &.form{
+
+    &.form {
         height: 100vh;
         display: flex;
         justify-content: center;
@@ -50,7 +68,7 @@ body{
     }
 }
 
-form{
+form {
     padding: 20px;
     border-radius: 8px;
     border: 1px solid $stroke;
@@ -59,51 +77,135 @@ form{
     align-items: center;
     gap: 16px;
     width: 30%;
-    input:not(.btn){
+
+    input:not(.btn) {
         padding: 10px 3%;
         width: 94%;
         border-radius: 8px;
         border: 1px solid $stroke;
         outline: none;
-        &:focus{
+
+        &:focus {
             border: 1px solid $main;
             caret-color: $main;
         }
-        &::placeholder{
+
+        &::placeholder {
             font-weight: 600;
         }
     }
-    .links-menu{
-        a{
+
+    .links-menu {
+        a {
             display: block;
             text-align: center;
             transition: 300ms;
-            &:hover{
+
+            &:hover {
                 color: $main;
             }
         }
     }
 }
 
-header{
+header {
     padding: 30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .nav-links{
+
+    .nav-links {
         display: flex;
         gap: 24px;
     }
-    h1{
+
+    h1 {
         color: $active;
     }
-    a.active, div.active{
-        svg{
-            path{
+
+    a.active,
+    div.active {
+        svg {
+            path {
                 fill: $second;
             }
         }
     }
 }
 
+.main {
+    display: flex;
+    gap: 23px;
+    padding-bottom: 80px;
 
+    .title {
+        width: 50%;
+        background-color: $main;
+        border-radius: 8px;
+        padding: 36px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 34px;
+
+        h1 {
+            color: white;
+            margin: 0 55px;
+        }
+    }
+
+    img {
+        width: 50%;
+    }
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 27px;
+    padding-bottom: 80px;
+
+    .product {
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.15);
+
+        .card-content {
+            padding: 10px;
+
+            h2 {
+                color: $dark;
+                margin-bottom: 14px;
+            }
+
+            .product-info {
+                font-size: 12px;
+                color: #000000;
+                margin-bottom: 8px;
+            }
+
+            .product-size {
+                font-size: 10px;
+                color: #6A6A6A;
+                margin-bottom: 7px;
+            }
+        }
+    }
+}
+
+.add-form {
+    #add {
+        margin: 0 auto;
+        padding-bottom: 56px;
+    }
+}
+
+footer {
+    background-color: $dark;
+    padding: 37px 0;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
