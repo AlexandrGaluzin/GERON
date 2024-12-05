@@ -86,6 +86,12 @@ body h4 {
   font-weight: 700;
   color: #202020;
 }
+body h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #202020;
+}
 body p,
 body a,
 body input {
@@ -153,16 +159,13 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-header .nav-links {
+header .nav-links,
+header .nav-links-profile {
   display: flex;
   gap: 24px;
 }
 header h1 {
   color: #EF5DA8;
-}
-header a.active svg path,
-header div.active svg path {
-  fill: #FF3D00;
 }
 
 .main {
@@ -217,9 +220,11 @@ header div.active svg path {
   margin-bottom: 7px;
 }
 
+.add-form {
+  padding-bottom: 56px;
+}
 .add-form #add {
   margin: 0 auto;
-  padding-bottom: 56px;
 }
 
 footer {
@@ -230,6 +235,85 @@ footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+footer .container p {
+  color: white;
+}
+footer .container .info {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+header .active-profile {
+  color: #202020;
+}
+header .nav-links-profile .profile svg path {
+  fill: #FF3D00;
+}
+
+.profile-user {
+  display: flex;
+  gap: 85px;
+  background-color: #0085FF;
+  padding: 34px 0;
+  border-radius: 8px;
+}
+.profile-user h2 {
+  margin-bottom: 5px;
+}
+.profile-user h5 {
+  color: white;
+}
+.profile-user .edit {
+  width: 50%;
+  height: 100%;
+  margin-left: 34px;
+  display: flex;
+  gap: 38px;
+}
+.profile-user .edit .edit-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.profile-user .about-my {
+  width: 50%;
+  margin-right: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.awards {
+  margin: 80px 0 96px;
+}
+.awards h1 {
+  margin-bottom: 25px;
+}
+.awards .awards-cards {
+  display: flex;
+  justify-content: space-between;
+}
+.awards .awards-cards .awards-card {
+  width: 109px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.awards .awards-cards .awards-card .cover-awards {
+  margin-bottom: 7px;
+}
+.awards .awards-cards .awards-card h2 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #202020;
+  margin-bottom: 7px;
+}
+.awards .awards-cards .awards-card p {
+  font-size: 10px;
+  font-weight: 400;
+  color: #808080;
 }
 
 /*# sourceMappingURL=style.css.map */

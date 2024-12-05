@@ -1,5 +1,6 @@
 @use 'colors' as *;
-@mixin button($color, $bgColor:$light){
+
+@mixin button($color, $bgColor: $light) {
     padding: 10px 0;
     width: 100%;
     font-family: "Montserrat", sans-serif;
@@ -11,12 +12,14 @@
     background-color: $bgColor;
     border: 1px solid $color;
     border-radius: 5px;
-    &:hover{
+
+    &:hover {
         color: $bgColor;
         background-color: $color;
     }
 }
-@mixin font-style($size: 14px, $weight:400, $color: $dark){
+
+@mixin font-style($size: 14px, $weight: 400, $color: $dark) {
     font-family: "Montserrat", sans-serif;
     font-size: $size;
     font-weight: $weight;

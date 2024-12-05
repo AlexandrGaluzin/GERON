@@ -45,6 +45,10 @@ body {
         @include font-style(12px, 700);
     }
 
+    h5 {
+        @include font-style(12px, 400);
+    }
+
     p,
     a,
     input {
@@ -114,7 +118,8 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    .nav-links {
+    .nav-links,
+    .nav-links-profile {
         display: flex;
         gap: 24px;
     }
@@ -123,14 +128,6 @@ header {
         color: $active;
     }
 
-    a.active,
-    div.active {
-        svg {
-            path {
-                fill: $second;
-            }
-        }
-    }
 }
 
 .main {
@@ -194,18 +191,121 @@ header {
 }
 
 .add-form {
+    padding-bottom: 56px;
+
     #add {
         margin: 0 auto;
-        padding-bottom: 56px;
     }
 }
 
 footer {
     background-color: $dark;
     padding: 37px 0;
+
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        p {
+            color: white;
+        }
+
+        .info {
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+}
+
+header {
+    .active-profile {
+        color: $dark;
+    }
+
+    .nav-links-profile {
+        .profile {
+            svg {
+                path {
+                    fill: $second;
+                }
+            }
+        }
+    }
+}
+
+.profile-user {
+    display: flex;
+    gap: 85px;
+    background-color: $main;
+    padding: 34px 0;
+    border-radius: 8px;
+
+    h2 {
+        margin-bottom: 5px;
+    }
+
+    h5 {
+        color: white;
+    }
+
+    .edit {
+        width: 50%;
+        height: 100%;
+        margin-left: 34px;
+        display: flex;
+        gap: 38px;
+
+        .edit-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    .about-my {
+        width: 50%;
+        margin-right: 34px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+}
+
+.awards {
+    margin: 80px 0 96px;
+
+    h1 {
+        margin-bottom: 25px;
+    }
+
+    .awards-cards {
+        display: flex;
+        justify-content: space-between;
+        .awards-card {
+            width: 109px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .cover-awards {
+                margin-bottom: 7px;
+            }
+
+            h2 {
+                font-size: 12px;
+                font-weight: 600;
+                color: $dark;
+                margin-bottom: 7px;
+            }
+
+            p {
+                font-size: 10px;
+                font-weight: 400;
+                color: $placeholder;
+            }
+        }
     }
 }
